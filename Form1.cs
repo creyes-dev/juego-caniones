@@ -183,7 +183,10 @@ namespace Cañones
             this.Refresh();
 
             // 5. MOVER LA BOLA
-            DibujarBola();
+            if (bolaDisparada)
+            {
+                DibujarBola();
+            }
             DibujarJugadores();
             // 6. DETECTAR COLISIONES
             ControlarColisionesBola();
@@ -191,8 +194,6 @@ namespace Cañones
 
         private void DibujarBola()
         {
-            if (bolaDisparada)
-            {
                 Brush colorBola = Brushes.Blue;
                 int direccionHorizontalBola = 1;
 
@@ -221,7 +222,6 @@ namespace Cañones
                 //Dibujar la bola
                 Graphics graficos = this.CreateGraphics();
                 graficos.FillEllipse(colorBola, posicionXBola, posicionYBola, radioBola, radioBola);
-            }
         }
 
         private void DibujarJugadores()
