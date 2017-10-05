@@ -359,20 +359,6 @@ namespace Cañones
 
                 }
             }
-
-            Graphics graficos = this.CreateGraphics();
-
-            graficos.FillRectangle(Brushes.DarkOliveGreen, 1, limiteSuperiorCañon, 1400, 1);
-            graficos.FillRectangle(Brushes.DarkOliveGreen, 1, limiteInferiorCañon, 1400, 1);
-
-            graficos.FillRectangle(Brushes.DarkOliveGreen, limiteIzquierdoCañon, 1, 1, 800);
-            graficos.FillRectangle(Brushes.DarkOliveGreen, limiteDerechoCañon, 1, 1, 800);
-
-            graficos.FillRectangle(Brushes.DarkRed, 1, limiteSuperiorBola, 1400, 1);
-            graficos.FillRectangle(Brushes.DarkRed, 1, limiteInferiorBola, 1400, 1);
-
-            graficos.FillRectangle(Brushes.DarkRed, limiteIzquierdoBola, 1, 1, 800);
-            graficos.FillRectangle(Brushes.DarkRed, limiteDerechoBola, 1, 1, 800);
             
             return bolaImpactaCañon;
         }
