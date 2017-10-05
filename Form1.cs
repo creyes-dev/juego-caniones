@@ -185,6 +185,9 @@ namespace Cañones
             // 5. MOVER LA BOLA
             if (bolaDisparada)
             {
+                // han pasado 100ms (1 decima de segundo) más
+                // porque esta funcion es llamada cada 100ms
+                decimasSegundoDesdeDisparo += 1;
                 DibujarBola();
             }
             DibujarJugadores();
@@ -202,10 +205,6 @@ namespace Cañones
                     colorBola = Brushes.Red;
                     direccionHorizontalBola = -1;
                 }
-
-                // han pasado 100ms (1 decima de segundo)
-                // porque esta funcion es llamada cada 100ms
-                decimasSegundoDesdeDisparo += 1;
 
                 // calcular la nueva coordenada de x
                 //X =X_0 + V_0x(t) 
