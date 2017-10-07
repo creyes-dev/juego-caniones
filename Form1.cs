@@ -312,7 +312,7 @@ namespace Cañones
                 else
                 {
                     // La bola traspasa el límite izquierdo de la ventana
-                    if (posicionXBola - radioBola < 0)
+                    if (posicionXBola + radioBola < 0)
                     {
                         bolaTraspasaLimitesVentana = true;
                     }
